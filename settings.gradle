@@ -1,0 +1,3 @@
+include ':hdesdk_kotlin_lib'
+include ':app'
+rootProject.name = "HDESDK_kotlin_lib"
