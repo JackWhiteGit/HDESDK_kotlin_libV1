@@ -8,6 +8,12 @@ import java.net.HttpURLConnection
 import java.net.URL
 import java.net.URLEncoder
 
+/**
+ * Request construct class
+ * @param userEmail email address for access
+ * @param apikey API key of your HelpDeskEddy profile
+ * @param hdeUrl URL of your HelpDeskEddy system
+ */
 
 class RequestHttp(userEmail: String?, apikey: String?, hdeUrl: String?) {
     private var user_email: String? = userEmail
@@ -18,6 +24,13 @@ class RequestHttp(userEmail: String?, apikey: String?, hdeUrl: String?) {
     fun getAuthToken(): String?{
         return this.auth_token
     }
+
+    /**
+     * Request generetion method
+     * @param request_type type of API request
+     * @param options_arr request options
+     * @return JSON String, HelpDeskEddy API answer
+     */
 
     fun Request(
         request_type: String?,

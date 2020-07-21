@@ -6,8 +6,19 @@ import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
 import java.util.*
 
+/**
+ * Request options generetion
+ */
+
 class RequestPresets {
 
+    /**
+     * Request options generetion
+     *
+     * @param request_type  type of API request
+     * @param options_arr  request options
+     * @return Map <String, String>, request options for needed request type
+     */
     fun RequestOptions(
         request_type: String,
         options_arr: Map<String?, String?>?
@@ -267,6 +278,13 @@ class RequestPresets {
         return temp
     }
 
+    /**
+     *
+     * @param request_type type of API request
+     * @param options_arr  request options
+     * @return String, request params for current request type
+     */
+
     fun RequestData(
         request_type: String,
         options_arr: Map<String?, String?>?
@@ -313,6 +331,12 @@ class RequestPresets {
         return requerstData.toString()
     }
 
+    /**
+     * String Url encode
+     * @param value some option
+     * @return String, URL encoded option
+     */
+
     private fun encodeValue(value: String?): String? {
         return try {
             URLEncoder.encode(
@@ -323,6 +347,12 @@ class RequestPresets {
             throw RuntimeException(ex.cause)
         }
     }
+
+    /**
+     * String last symbol cleaner
+     * @param str params string
+     * @return String, clean params string
+     */
 
     fun removeLastCharacter(str: String?): String? {
         var result: String? = null
