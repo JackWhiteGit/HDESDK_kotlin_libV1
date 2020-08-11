@@ -71,4 +71,4 @@ And call AsyncTask with your API requests in onCreate method:
         RequestTask().execute()
     }
 ```   
-For more information You can visit [Javadoc SDK Documentation](http://demo3.newsite.lv/HDE_JAVA_SDK/index.html) and official [HelpDeskEddy API Documentation](https://helpdeskeddy.ru/api.html)
+For more information You can visit [Javadoc SDK Documentation](http://eddyplugins.com/docs/HDE_KOTLIN_SDK/index.html) and official [HelpDeskEddy API Documentation](https://helpdeskeddy.ru/api.html)
